@@ -114,17 +114,24 @@ TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
 GOOD LUCK 😀
 */
+const dolphinsScores = [97, 112, 101];
+const koalasScores = [108, 95, 106]
 
-const dolphinsAvg = (97 + 112 + 101) / 3;
-const koalassAvg = (108 + 95 + 106) / 3;
+const average = (array) => array.reduce((a,b) => a + b) / array.length;
 
-// if (dolphinsAvg > koalassAvg) {
-//   console.log(`Dolphins win with an average score of ${dolphinsAvg}!`);
-// } else if (koalassAvg > dolphinsAvg) {
-//   console.log(`Koalas win with an average score of ${koalassAvg}!`);
-// } else {
-//   console.log(`It's a draw!`);
-// }
+const dolphinsAvg = average(dolphinsScores);
+console.log(dolphinsAvg);
+
+const koalassAvg = average(koalasScores);
+console.log(koalassAvg);
+
+if (dolphinsAvg > koalassAvg) {
+  console.log(`Dolphins win with an average score of ${dolphinsAvg}!`);
+} else if (koalassAvg > dolphinsAvg) {
+  console.log(`Koalas win with an average score of ${koalassAvg}!`);
+} else {
+  console.log(`It's a draw!`);
+}
 
 // if (dolphinsAvg < 100 || koalassAvg < 100) {
 //   console.log("Nobody won this round.");
